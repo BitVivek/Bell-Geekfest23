@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Analyzer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 15px;
+            text-align: center;
+            width: 300px;
+        }
+        #results {
+            
+            text-align: left;
+        }
+        .label {
+            font-weight: bold;
+        }
+        .high-risk {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h3><i class="fas fa-envelope-open-text"></i> Email Analyzer</h3>
+    <p>Analyze emails to detect phishing attempts.</p>
+    <button class="btn btn-primary" id="analyzeBtn">Analyze Email</button>
+
+    <div id="results" class="mt-4">
+        <div id="emailData"></div>
+        <hr>
+        <h5>Analysis Summary:</h5>
+        <p>Emails Scanned: <span id="emailsScanned">0</span></p>
+        <p>Phishing Emails Detected: <span id="phishingDetected">0</span></p>
+      
+        <ul id="blacklist" style="display: none;"></ul>
+        <p>Account vulnerability</p>
+        <div class="progress">
+            <div class="progress-bar" id="vulnerabilityProgress" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+    <div class="mt-4">
+        <a href="#" target="_blank">Check out our upcoming features!</a>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
